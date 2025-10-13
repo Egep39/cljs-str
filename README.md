@@ -4,9 +4,17 @@ A more efficient alternative for CLJS `str` that emits compile time optimized te
 
 ## Usage:
 
-Drop in replacement for direct calls of `str`.
+```
+(ns borkdude.cljs-str
+  (:refer-clojure :exclude [str])
+  (:require [borkdude.cljs-str :refer [str])))
 
-It:
+(str 1 2 3)
+```
+
+## What does this library do?
+
+The CLJS `str` that comes with this library:
 
 - Emits less code
 - Emits code that can be optimized by JavaScript engines (~280x faster as shown in the below benchmark):
