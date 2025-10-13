@@ -21,7 +21,7 @@ The CLJS `str` that comes with this library:
 
 To illustrate what it emits:
 
-For `(str 1 2 nil (+ 1 2 3))` `borkdude.cljs-str/str` emits:
+For `(str 1 2 nil (+ 1 2 3))` it spits out a JS template string:
 
 ``` javascript
 `12${(((1) + (2)) + (3)) ?? ''}`
