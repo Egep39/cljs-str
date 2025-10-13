@@ -5,10 +5,10 @@
 (defn str-test []
   (let [f1 (fn [x] (str 1 2 nil (+ 1 2 3) true false "multi
 
-line string" x))
+line string with `backticks`" x))
         f2 (fn [x] (clojure.core/str 1 2 nil (+ 1 2 3) true false "multi
 
-line string" x))
+line string with `backticks`" x))
         f3 (fn [] (apply str [1 2 3]))
         f4 (fn [] (apply clojure.core/str [1 2 3]))]
     (js/console.log "f1" (str f1))
