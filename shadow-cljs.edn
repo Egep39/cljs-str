@@ -1,0 +1,6 @@
+{:deps true
+ :builds
+ {:main {:target :esm
+         :runtime :node
+         :output-dir "lib"
+         :modules {:main {:init-fn borkdude.cljs-str-test/init}}}}}
