@@ -6,7 +6,8 @@
 (defn constant? [x]
   (or (number? x)
       (keyword? x)
-      (string? x)))
+      (string? x)
+      (boolean? x)))
 
 (defmacro str [& xs]
   (let [args (map (fn [expr]

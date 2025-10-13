@@ -3,8 +3,8 @@
   (:require [borkdude.cljs-str :refer [str]]))
 
 (defn str-test []
-  (let [f1 (fn [] (str 1 2 nil (+ 1 2 3)))
-        f2 (fn [] (clojure.core/str 1 2 nil (+ 1 2 3)))
+  (let [f1 (fn [] (str 1 2 nil (+ 1 2 3) true false))
+        f2 (fn [] (clojure.core/str 1 2 nil (+ 1 2 3) true false))
         f3 (fn [] (apply str [1 2 3]))
         f4 (fn [] (apply clojure.core/str [1 2 3]))]
     (js/console.log "f1" (str f1))
