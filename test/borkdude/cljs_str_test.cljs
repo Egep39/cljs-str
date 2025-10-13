@@ -1,9 +1,8 @@
 (ns borkdude.cljs-str-test
   (:refer-clojure :exclude [str])
-  (:require [borkdude.cljs-str :refer [str]]
-            [clojure.test :as t :refer [deftest]]))
+  (:require [borkdude.cljs-str :refer [str]]))
 
-(deftest str-test
+(defn str-test []
   (let [f1 (fn [] (str 1 2 nil (+ 1 2 3)))
         f2 (fn [] (clojure.core/str 1 2 nil (+ 1 2 3)))
         f3 (fn [] (apply str [1 2 3]))
@@ -16,7 +15,7 @@
     (simple-benchmark [] (f2) 100000000)
     (simple-benchmark [] (f3) 100000000)
     (simple-benchmark [] (f4) 100000000))
-  (apply str [1 2 3]))
+  (prn (apply str [1 2 3])))
 
 (defn init []
-  (t/run-test str-test))
+  (str-test))
