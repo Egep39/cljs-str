@@ -15,9 +15,10 @@ A more efficient alternative for CLJS `str` that emits optimizable JS code.
 ## What does this library do?
 
 The CLJS `str` that comes with this library emits code that can be optimized by
-JavaScript engines. In some cases, especially when you use constant values, it
-can be -280x faster. With all variables this version is still about 4x faster
-due to avoiding allocating arrays.
+JavaScript engines. In some cases, especially when you use constant values,
+e.g. `(str "foo" "bar")`, it can be -280x faster. With mostly variables,
+e.g. `(str "foo" x y z)`, this version is still about 4x faster due to avoiding
+allocating arrays.
 
 Note that the output of this library is fully compatible with older versions of JS.
 
