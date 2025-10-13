@@ -1,6 +1,6 @@
 # CLJS str
 
-A more efficient alternative for CLJS `str` that emits compile time optimized template strings in JS.
+A more efficient alternative for CLJS `str` that emits optimizable JS code.
 
 ## Usage:
 
