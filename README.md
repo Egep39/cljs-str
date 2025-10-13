@@ -14,10 +14,8 @@ A more efficient alternative for CLJS `str` that emits compile time optimized te
 
 ## What does this library do?
 
-The CLJS `str` that comes with this library:
-
-- Emits less code
-- Emits code that can be optimized by JavaScript engines (~280x faster as shown in the below benchmark):
+The CLJS `str` that comes with this library emits code that can be optimized by
+JavaScript engines (~280x faster as shown in the below benchmark).
 
 To illustrate what it emits:
 
