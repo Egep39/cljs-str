@@ -9,4 +9,4 @@
   (str/join "" xs))
 
 (defn ?? [x]
-  (if (nil? x) "" x))
+  (if (nil? x) "" (.toString x)))
