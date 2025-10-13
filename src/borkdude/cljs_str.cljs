@@ -7,3 +7,6 @@
   "Runtime version of `str`, only used as fallback when macro isn't invoked."
   [& xs]
   (str/join "" xs))
+
+(defn ?? [x]
+  (if (nil? x) "" x))

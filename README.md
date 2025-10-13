@@ -24,7 +24,7 @@ To illustrate what it emits:
 For `(str 1 2 nil (+ 1 2 3))` it spits out a JS template string:
 
 ``` javascript
-`12${(((1) + (2)) + (3)) ?? ''}`
+''+1+2+borkdude.cljs_str._QMARK__QMARK_((((1) + (2)) + (3)))+true+false+"multi\n\nline string"+borkdude.cljs_str._QMARK__QMARK_(x)
 ```
 
 whereas CLJS emits:
@@ -32,6 +32,8 @@ whereas CLJS emits:
 ``` javascript
 [cljs.core.str.cljs$core$IFn$_invoke$arity$1((1)),cljs.core.str.cljs$core$IFn$_invoke$arity$1((2)),null,cljs.core.str.cljs$core$IFn$_invoke$arity$1((((1) + (2)) + (3)))].join('')
 ```
+
+Note that the output of this library is fully compatible with older versions of JS.
 
 This test illustrates the gain in performance:
 
