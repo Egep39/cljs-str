@@ -15,7 +15,8 @@ A more efficient alternative for CLJS `str` that emits compile time optimized te
 ## What does this library do?
 
 The CLJS `str` that comes with this library emits code that can be optimized by
-JavaScript engines (~280x faster as shown in the below benchmark).
+JavaScript engines (~280x faster as shown in the below benchmark). The main context to use
+this is in projects that rely heavily string concatenation and wish to make that faster.
 
 To illustrate what it emits:
 
