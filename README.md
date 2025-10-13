@@ -4,7 +4,7 @@ A more efficient alternative for CLJS `str` that emits compile time optimized te
 
 ## Usage:
 
-```
+``` clojure
 (ns borkdude.cljs-str
   (:refer-clojure :exclude [str])
   (:require [borkdude.cljs-str :refer [str])))
