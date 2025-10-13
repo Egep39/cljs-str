@@ -19,7 +19,7 @@ JavaScript engines (~280x faster as shown in the below benchmark).
 
 To illustrate what it emits:
 
-For `(str 1 2 nil (+ 1 2 3))` it spits out a JS template string:
+For `(str 1 2 nil (+ 1 2 3))` it spits out string concatenation that doesn't allocate any arrays or calls into multi-arity functions:
 
 ``` javascript
 ''+1+2+borkdude.cljs_str._QMARK__QMARK_((((1) + (2)) + (3)))+true+false+"multi\n\nline string"+borkdude.cljs_str._QMARK__QMARK_(x)
