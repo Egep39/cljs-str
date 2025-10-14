@@ -11,13 +11,11 @@
 
 (defmacro str [& xs]
   (let [args (map (fn [expr]
-                    (cond (constant? expr)
-                          [(core/str "+" (if (string? expr)
-                                           (pr-str expr)
-                                           expr)) nil]
-                          (nil? expr)
-                          ["" nil]
+                    (cond (nil? expr)
+                          [nil nil]
+                          (constant? expr)
+                          ["+~{}" expr]
                           :else ["+~{}" (list `?? expr)])) xs)]
     `(~'js*
-      ~(core/str "''" (str/join "" (map first args)))
+      ~(core/str "''" (str/join (keep first args)))
       ~@(keep second args))))
