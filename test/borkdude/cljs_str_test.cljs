@@ -9,7 +9,9 @@
 
 
 (defn str-test []
-  (let [f1 (fn [^js x y] (str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
+  (let [f00 (fn [] (str 1 2 true false nil "dude" "~{}"))
+        f01 (fn [] (clojure.core/str 1 2 true false nil "dude" "~{}"))
+        f1 (fn [^js x y] (str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
 
 line string with `backticks`" y))
         f2 (fn [x y] (clojure.core/str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
@@ -17,12 +19,17 @@ line string with `backticks`" y))
 line string with `backticks`" y))
         f3 (fn [] (apply str [1 2 3]))
         f4 (fn [] (apply clojure.core/str [1 2 3]))]
+    (js/console.log "f00" (str f00))
+    (js/console.log "f01" (str f01))
+    (js/console.log "f2" (str f2))
     (js/console.log "f1" (str f1))
     (js/console.log "f2" (str f2))
     (js/console.log "f3" (str f3))
     (js/console.log "f4" (str f4))
     (prn (f1 1 :foo))
     (prn (f2 1 :foo))
+    (simple-benchmark [] (f00) 100000000)
+    (simple-benchmark [] (f01) 100000000)
     (simple-benchmark [] (f1 1 :foo) 100000000)
     (simple-benchmark [] (f2 1 :foo) 100000000)
     (simple-benchmark [] (f3) 100000000)
