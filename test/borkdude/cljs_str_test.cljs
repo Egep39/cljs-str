@@ -4,8 +4,12 @@
 
 (def edge-case-obj #js {:valueOf (fn [] "dude") :toString (fn [] "string")})
 
+;; should print 3, not undefined
+(js/console.log (. (str 138) -length))
+
+
 (defn str-test []
-  (let [f1 (fn [x y] (str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
+  (let [f1 (fn [^js x y] (str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
 
 line string with `backticks`" y))
         f2 (fn [x y] (clojure.core/str x 1 2 nil edge-case-obj (+ 1 2 3) true false "multi
