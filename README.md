@@ -41,6 +41,10 @@ When using `str` at runtime, e.g. in `(apply str [1 2 3])`,
 `borkdude.cljs-str/str` falls back on `cljs.string/join` which is just as fast
 as when using `str` with `apply`.
 
+## Can this be patched back into CLJS?
+
+Yes, already in progress [here](https://clojure.atlassian.net/browse/CLJS-3452).
+
 ## License
 
 MIT

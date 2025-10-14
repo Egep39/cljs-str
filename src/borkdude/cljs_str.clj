@@ -1,9 +1,9 @@
 (ns borkdude.cljs-str
   (:refer-clojure :exclude [str])
-  (:require [clojure.core :as core]
-            [clojure.string :as string]
+  (:require [cljs.analyzer]
+            [clojure.core :as core]
             [clojure.set]
-            [cljs.analyzer]))
+            [clojure.string :as string]))
 
 (core/defn- compatible? [inferred-tag allowed-tags]
   (if (set? inferred-tag)
